@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NXTGEN Business Credit &amp; Federal Program — Done-For-You, 6 Months</title>
+<meta name="description" content="The complete 6-month, done-for-you program: bureau files opened, a Tier-1 vendor stack built and monitored, your federal UEI/SAM.gov registration completed, and grant opportunities scanned and written — all handled by NXTGEN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101D33; --ink2:#15233A; --ink3:#233757;
+    --paper:#F2F0EB; --surface:#FFFFFF; --line:#DAD6CC; --line-dark:#2B3E5C;
+    --muted:#6B7280; --muted-dark:#8FA2BA;
+    --green:#1C7A46; --green-bright:#2FA463; --green-soft:#E4F0E9;
+    --amber:#B27A1F; --amber-soft:#F6ECD6;
+    --red:#A33329; --red-soft:#F3DFDC;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;
+    padding:10px 16px;font-family:var(--mono);font-size:12px;z-index:100;border-radius:0 0 3px 0}
+  .skip:focus{left:0}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+    font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--green)}
+  img{max-width:100%}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--green);margin:0 0 10px;font-weight:500}
+  .dark .eyebrow{color:var(--green-bright)}
+  h2.sec{font-size:clamp(26px,4.4vw,40px);line-height:1.12;letter-spacing:-.02em;
+    font-weight:800;margin:0 0 14px}
+  .lede{font-size:17px;color:#3D4759;max-width:640px;margin:0}
+  .dark .lede{color:#B9C6D8}
+  section{padding:76px 0}
+  .btn{display:inline-block;font-family:var(--mono);font-size:13px;letter-spacing:.06em;
+    text-transform:uppercase;font-weight:600;text-decoration:none;padding:15px 26px;
+    border-radius:3px;border:1px solid transparent;cursor:pointer;transition:transform .12s ease, box-shadow .12s ease}
+  .btn.primary{background:var(--green);color:#fff}
+  .btn.primary:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(28,122,70,.35)}
+  .btn.ghost{border-color:var(--line-dark);color:#E5ECF5}
+  .btn.ghost:hover{border-color:var(--green-bright);color:var(--green-bright)}
+  .btn.dark{background:var(--ink);color:#fff}
+  .sub-cta{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:12px;letter-spacing:.04em}
+  .dark .sub-cta{color:var(--muted-dark)}
+  .ph{background:var(--amber-soft);color:var(--amber);font-family:var(--mono);font-size:10px;
+    letter-spacing:.08em;padding:2px 6px;border-radius:2px;vertical-align:middle}
+
+  /* Nav */
+  nav.top{position:sticky;top:0;z-index:50;background:rgba(16,29,51,.94);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line-dark)}
+  .top-inner{max-width:1100px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:20px}
+  .logo{font-weight:800;font-size:17px;color:#fff;text-decoration:none;letter-spacing:-.01em}
+  .logo span{color:var(--green-bright)}
+  .navlinks{display:none;gap:22px;margin-left:8px}
+  .navlinks a{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:#B9C6D8;text-decoration:none}
+  .navlinks a:hover{color:var(--green-bright)}
+  .top .btn{margin-left:auto;padding:10px 18px;font-size:11.5px}
+  @media(min-width:820px){.navlinks{display:flex}}
+
+  /* Hero */
+  .hero{background:linear-gradient(160deg,var(--ink) 0%,var(--ink2) 60%,#0D1830 100%);
+    color:#fff;padding:84px 0 70px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:repeating-linear-gradient(0deg,transparent 0 39px,rgba(255,255,255,.035) 39px 40px);}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;position:relative;z-index:2}
+  @media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr}}
+  .hero h1{font-size:clamp(34px,5.6vw,56px);line-height:1.06;letter-spacing:-.025em;
+    font-weight:800;margin:0 0 18px}
+  .hero h1 em{font-style:normal;color:var(--green-bright)}
+  .hero p.big{font-size:18px;color:#C3CFDF;max-width:560px;margin:0 0 30px}
+  .hero .audience{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--green-bright);margin:0 0 16px}
+
+  /* Signature: PAYDEX file card */
+  .filecard{background:#0C1626;border:1px solid var(--line-dark);border-radius:6px;
+    padding:26px;max-width:420px;margin:0 auto;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+  .filecard .fhead{display:flex;justify-content:space-between;align-items:center;
+    border-bottom:1px solid var(--line-dark);padding-bottom:12px;margin-bottom:18px}
+  .filecard .fhead b{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:#8FA2BA}
+  .stamp{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--green-bright);
+    border:1px solid var(--green-bright);padding:3px 7px;border-radius:2px}
+  .gauge-row{display:flex;align-items:center;gap:22px}
+  .gauge{position:relative;width:130px;height:130px;flex-shrink:0}
+  .gauge svg{transform:rotate(-90deg)}
+  .gauge .num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .gauge .num b{font-size:34px;font-weight:800;letter-spacing:-.02em;line-height:1}
+  .gauge .num span{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:#8FA2BA;margin-top:4px}
+  .tls{flex:1;display:flex;flex-direction:column;gap:9px}
+  .tl-line{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10.5px}
+  .tl-line span{color:#8FA2BA}
+  .tl-line b{color:var(--green-bright);font-weight:500;letter-spacing:.05em}
+  .filecard .ffoot{border-top:1px solid var(--line-dark);margin-top:18px;padding-top:12px;
+    font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:#8FA2BA;display:flex;justify-content:space-between}
+  .ffoot b{color:#E5ECF5;font-weight:500}
+
+  /* Marquee */
+  .marquee{background:var(--green);color:#fff;overflow:hidden;padding:11px 0;
+    font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+  .marquee .track{display:inline-block;animation:scroll 28s linear infinite}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+
+  /* Pillars */
+  .pillars{display:grid;grid-template-columns:1fr;gap:16px;margin-top:44px}
+  @media(min-width:700px){.pillars{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1000px){.pillars{grid-template-columns:repeat(4,1fr)}}
+  .pillar{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--green);
+    border-radius:4px;padding:20px}
+  .pillar h3{font-size:16px;margin:0 0 6px;font-weight:700}
+  .pillar p{font-size:13.5px;color:var(--muted);margin:0}
+
+  /* Pain */
+  .pain{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .pain-list{display:flex;flex-direction:column;gap:0;margin-top:34px;max-width:720px}
+  .pain-item{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line);font-size:16px;color:#33405A}
+  .pain-item:last-child{border-bottom:1px solid var(--line)}
+  .pain-item .x{font-family:var(--mono);color:var(--red);font-weight:600;flex-shrink:0}
+  .pain-close{font-size:18px;font-weight:600;max-width:680px;margin:30px 0 0;color:var(--ink)}
+  .pain-close strong{color:var(--green)}
+
+  /* Coach */
+  .coach{background:var(--ink);color:#fff}
+  .coach-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+  @media(min-width:860px){.coach-grid{grid-template-columns:340px 1fr}}
+  .coach-photo{background:#0C1626;border:1px solid var(--line-dark);border-radius:6px;
+    aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;
+    font-family:var(--mono);font-size:11px;color:#8FA2BA;letter-spacing:.1em;text-align:center;padding:20px}
+  .coach h2.sec{color:#fff}
+  .coach p{color:#B9C6D8;font-size:16px;max-width:560px}
+  .cred-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .chip{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    border:1px solid var(--line-dark);color:#C3CFDF;padding:6px 10px;border-radius:2px}
+  .chip.g{border-color:var(--green-bright);color:var(--green-bright)}
+
+  /* Program — ledger */
+  .module{background:var(--surface);border:1px solid var(--line);border-radius:5px;
+    margin-top:22px;overflow:hidden}
+  .mod-head{display:flex;align-items:baseline;gap:16px;padding:20px 24px;
+    background:var(--ink);color:#fff;flex-wrap:wrap}
+  .mod-head .num{font-family:var(--mono);font-size:12px;color:var(--green-bright);letter-spacing:.1em}
+  .mod-head h3{font-size:20px;margin:0;font-weight:700;letter-spacing:-.01em}
+  .mod-head .reports{margin-left:auto;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;
+    color:#8FA2BA;text-transform:uppercase}
+  .lesson{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:16px 24px;border-top:1px solid var(--line)}
+  .lesson:first-of-type{border-top:0}
+  .lesson .ln{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.06em;padding-top:3px}
+  .lesson b{font-size:15px;display:block;margin-bottom:3px}
+  .lesson p{margin:0;font-size:13.5px;color:var(--muted)}
+  @media(max-width:560px){.lesson{grid-template-columns:1fr}.lesson .ln{padding-top:0}}
+
+  /* Included tools */
+  .bonus-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:34px}
+  @media(min-width:760px){.bonus-grid{grid-template-columns:repeat(2,1fr)}}
+  .bonus{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);
+    border-radius:4px;padding:20px}
+  .bonus .tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--amber);
+    text-transform:uppercase;margin-bottom:6px;display:block}
+  .bonus b{font-size:16px}
+  .bonus p{font-size:13.5px;color:var(--muted);margin:6px 0 0}
+
+  /* Compare */
+  .cmp{width:100%;border-collapse:collapse;margin-top:34px;background:var(--surface);
+    border:1px solid var(--line);border-radius:5px;overflow:hidden;font-size:14px}
+  .cmp th,.cmp td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
+  .cmp th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    background:var(--ink);color:#fff}
+  .cmp th:last-child{color:var(--green-bright)}
+  .cmp td.alone{color:var(--muted)}
+  .cmp td.with{color:var(--green);font-weight:600}
+  @media(max-width:640px){.cmp{font-size:12.5px}.cmp th,.cmp td{padding:10px 10px}}
+
+  /* Pricing */
+  .price-panel{background:var(--ink);color:#fff;border-radius:6px;max-width:720px;margin:40px auto 0;
+    border:1px solid var(--line-dark);overflow:hidden}
+  .price-lines{padding:26px 28px 6px}
+  .pl{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line-dark);
+    font-size:14.5px;color:#C3CFDF}
+  .pl b{font-family:var(--mono);font-weight:500;color:#E5ECF5}
+  .pl.total{color:#fff;font-weight:600}
+  .pl.bundle{color:var(--green-bright);font-weight:700;font-size:16px}
+  .price-cta{padding:30px 28px 32px}
+  .price-cta .now{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:#8FA2BA;text-transform:uppercase;text-align:center;display:block}
+  .pay-options{display:grid;grid-template-columns:1fr;gap:14px;margin-top:20px}
+  @media(min-width:640px){.pay-options{grid-template-columns:1fr 1fr}}
+  .pay-card{background:#0C1626;border:1px solid var(--line-dark);border-radius:5px;padding:20px;text-align:center}
+  .pay-card.rec{border-color:var(--green-bright)}
+  .pay-card .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-bright);display:block;margin-bottom:10px}
+  .pay-card .amt{font-size:32px;font-weight:800;letter-spacing:-.02em;color:#fff;margin:0 0 4px}
+  .pay-card .sub{font-family:var(--mono);font-size:11px;color:#8FA2BA;margin-bottom:16px}
+  .price-cta p.note{color:#B9C6D8;font-size:13px;margin:18px 0 0;text-align:center}
+
+  /* Testimonials */
+  .quote-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:34px}
+  @media(min-width:820px){.quote-grid{grid-template-columns:repeat(3,1fr)}}
+  .quote{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:22px}
+  .quote p{font-size:14.5px;color:#33405A;margin:0 0 16px}
+  .quote .who{display:flex;align-items:center;gap:10px}
+  .quote .av{width:36px;height:36px;border-radius:50%;background:var(--green-soft);color:var(--green);
+    display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:600}
+  .quote .who b{font-size:13.5px;display:block}
+  .quote .who span{font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+
+  /* FAQ */
+  details{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+    margin-top:10px;padding:0 20px}
+  summary{cursor:pointer;font-weight:600;font-size:15.5px;padding:16px 0;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:14px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:var(--mono);color:var(--green);font-size:18px;flex-shrink:0}
+  details[open] summary::after{content:"–"}
+  details p{margin:0 0 18px;font-size:14.5px;color:#3D4759}
+  summary:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+
+  /* Guardrails */
+  .guard{background:var(--red-soft);border:1px solid #E3C4C0;border-radius:4px;
+    padding:22px 24px;font-size:14px;color:#5E1F19;margin-top:34px}
+  .guard b.t{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:8px}
+  .guard ul{margin:0;padding-left:18px}
+  .guard li{margin:5px 0}
+
+  /* Final CTA */
+  .final{background:linear-gradient(160deg,var(--ink),#0D1830);color:#fff;text-align:center}
+  .final h2.sec{color:#fff;max-width:700px;margin:0 auto 14px}
+  .final p{color:#B9C6D8;max-width:560px;margin:0 auto 30px}
+
+  footer{background:#0C1626;color:#8FA2BA;padding:44px 0 34px;font-size:13px}
+  .foot-grid{display:grid;grid-template-columns:1fr;gap:30px}
+  @media(min-width:760px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
+  footer .logo{font-size:16px}
+  footer h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:#E5ECF5;margin:0 0 12px}
+  footer ul{list-style:none;margin:0;padding:0}
+  footer li{margin:7px 0}
+  footer a{color:#8FA2BA;text-decoration:none}
+  footer a:hover{color:var(--green-bright)}
+  .legal{border-top:1px solid var(--line-dark);margin-top:34px;padding-top:22px;
+    font-size:11.5px;line-height:1.6;color:#6B7C94}
+  .legal p{margin:0 0 10px}
+
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn.primary:hover{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<nav class="top" aria-label="Primary">
+  <div class="top-inner">
+    <a class="logo" href="#top">NXTGEN<span>&nbsp;·&nbsp;Program</span></a>
+    <div class="navlinks">
+      <a href="#program">Program</a>
+      <a href="#team">Your Team</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn primary" href="#pricing">Enroll Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero dark" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="audience">6-month done-for-you program · credit + federal + grants</p>
+      <h1>Business credit that lenders trust —<br><em>built for you, start to finish.</em></h1>
+      <p class="big">Bureau files opened, a Tier-1 vendor stack built and monitored, your federal UEI/SAM.gov registration filed, and grant opportunities scanned and written — all executed by NXTGEN's team, not left for you to figure out.</p>
+      <a class="btn primary" href="#pricing">Enroll in the Program</a>
+      <a class="btn ghost" href="#program" style="margin-left:10px">See what's included</a>
+      <p class="sub-cta">6-month engagement · Pay in full or in monthly installments · Business credit building — not personal credit repair</p>
+    </div>
+    <div class="filecard" aria-label="Sample business credit file illustration">
+      <div class="fhead"><b>BUSINESS CREDIT FILE</b><span class="stamp">REPORTING</span></div>
+      <div class="gauge-row">
+        <div class="gauge">
+          <svg width="130" height="130" viewBox="0 0 130 130" aria-hidden="true">
+            <circle cx="65" cy="65" r="56" fill="none" stroke="#233757" stroke-width="9"/>
+            <circle id="gaugeArc" cx="65" cy="65" r="56" fill="none" stroke="#2FA463" stroke-width="9"
+              stroke-linecap="round" stroke-dasharray="352" stroke-dashoffset="352"/>
+          </svg>
+          <div class="num"><b id="gaugeNum">0</b><span>PAYDEX</span></div>
+        </div>
+        <div class="tls">
+          <div class="tl-line"><span>TRADELINE 01</span><b>PAID EARLY</b></div>
+          <div class="tl-line"><span>TRADELINE 02</span><b>PAID EARLY</b></div>
+          <div class="tl-line"><span>TRADELINE 03</span><b>PAID EARLY</b></div>
+          <div class="tl-line"><span>TRADELINE 04</span><b>REPORTING</b></div>
+          <div class="tl-line"><span>TRADELINE 05</span><b>REPORTING</b></div>
+        </div>
+      </div>
+      <div class="ffoot"><span>DAYS BEYOND TERMS</span><b>−12 (EARLY)</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    D&amp;B · EXPERIAN BUSINESS · EQUIFAX BUSINESS · SBFE · TIER-1 VENDOR STACK · SAM.GOV IS ALWAYS FREE · GRANT INTELLIGENCE INCLUDED · DONE FOR YOU · NO CPNS · NO SHORTCUTS · &nbsp;
+    D&amp;B · EXPERIAN BUSINESS · EQUIFAX BUSINESS · SBFE · TIER-1 VENDOR STACK · SAM.GOV IS ALWAYS FREE · GRANT INTELLIGENCE INCLUDED · DONE FOR YOU · NO CPNS · NO SHORTCUTS · &nbsp;
+  </div>
+</div>
+
+<main id="main">
+<!-- PILLARS -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">What's included</p>
+    <h2 class="sec">Federal-ready. Not just credit-ready.</h2>
+    <div class="pillars">
+      <div class="pillar"><h3>Done-For-You Execution</h3><p>We open the bureau files, submit the vendor applications, and manage the build — you're not learning a new skill, we're running the process.</p></div>
+      <div class="pillar"><h3>Tier-1 Vendor Stack, Managed</h3><p>3–5 net-30 vendors selected and staggered across reporting cycles, monitored until each tradeline verifiably posts.</p></div>
+      <div class="pillar"><h3>PAYDEX Mechanics, Handled</h3><p>We run the 10–15-day early-payment cadence that moves a score — automated on your behalf, not something you have to remember.</p></div>
+      <div class="pillar"><h3>Federal + Grants, Included</h3><p>UEI, SAM.gov, CAGE, and DSBS filed for you — plus grant intelligence scanning and proposal writing. Almost no competitor touches this.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain">
+  <div class="wrap">
+    <p class="eyebrow">The real problem</p>
+    <h2 class="sec">You don't need another course.<br>You need someone to execute it.</h2>
+    <div class="pain-list">
+      <div class="pain-item"><span class="x">✕</span>You've spent weeks trying to open bureau files yourself and still can't tell if anything is reporting.</div>
+      <div class="pain-item"><span class="x">✕</span>You opened a net-30 account, paid the invoice, and the tradeline never posted — with no one to escalate to.</div>
+      <div class="pain-item"><span class="x">✕</span>Your LLC's address is different at the IRS, the state, and the bank — and you don't know that's quietly splitting your file.</div>
+      <div class="pain-item"><span class="x">✕</span>Someone tried to sell you a CPN, a shelf company, or a "$50K guaranteed" package and it smelled wrong. It was.</div>
+      <div class="pain-item"><span class="x">✕</span>Every funding application still lands on your personal credit and a personal guarantee — because nobody built the business file for you.</div>
+    </div>
+    <p class="pain-close">Business credit is built in a specific order: <strong>identity → bureau files → reporting tradelines → payment history → funding.</strong> Skip a step and the ones after it silently fail. This program is that order, <strong>executed for you</strong> by a team that runs its own live build — not a video course you have to implement alone.</p>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="coach dark" id="team">
+  <div class="wrap coach-grid">
+    <img class="coach-photo" src="instructor.jpg" alt="Kathleen Bennett — NXTGEN Consulting LLC" style="width:100%;object-fit:cover;border-radius:6px;border:1px solid var(--line-dark);aspect-ratio:4/5;display:block">
+    <div>
+      <p class="eyebrow">Your program lead</p>
+      <h2 class="sec">Kathleen Bennett — NXTGEN Consulting LLC</h2>
+      <p>I don't hand you a course and wish you luck. My team and I execute every step of this program directly — real vendor accounts opened, invoices paid early, bureau files verified, your federal registration filed — while NXTGEN runs the same build on our own entity as proof of concept. <span class="ph">PLACEHOLDER — tighten bio + add verified results once first PAYDEX posts</span></p>
+      <div class="cred-chips">
+        <span class="chip g">Done-For-You Execution</span>
+        <span class="chip g">Live Vendor Tradeline Stack</span>
+        <span class="chip">Federal + Grant Registration</span>
+        <span class="chip">Texas Operator · NV LLC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program">
+  <div class="wrap">
+    <p class="eyebrow">The program</p>
+    <h2 class="sec">Six phases. Executed end to end.</h2>
+    <p class="lede">Not lessons to watch — work we do, on a fixed 6-month timeline.</p>
+
+    <div class="module">
+      <div class="mod-head"><span class="num">PHASE 01</span><h3>Fundable Foundation</h3><span class="reports">Prereq for everything</span></div>
+      <div class="lesson"><span class="ln">01</span><div><b>One Business, One Identity</b><p>We standardize your legal name, EIN, and one canonical address across the state, IRS, bank, and every application — closing the mismatch gap that splits or suppresses credit files.</p></div></div>
+      <div class="lesson"><span class="ln">02</span><div><b>The Legibility Layer</b><p>We help stand up a listed business phone, domain email, and a simple site — the footprint bureaus and underwriters actually check for.</p></div></div>
+      <div class="lesson"><span class="ln">03</span><div><b>Business Banking Done Right</b><p>We guide the account setup in your exact legal name with the EIN — the anchor for everything downstream.</p></div></div>
+    </div>
+
+    <div class="module">
+      <div class="mod-head"><span class="num">PHASE 02</span><h3>Bureau Files</h3><span class="reports">D&amp;B · Experian · Equifax</span></div>
+      <div class="lesson"><span class="ln">04</span><div><b>Your Free D-U-N-S Number</b><p>We file directly with D&amp;B under your canonical identity — never letting two versions of your business exist.</p></div></div>
+      <div class="lesson"><span class="ln">05</span><div><b>Experian Business &amp; Equifax / SBFE</b><p>We confirm and activate the other two bureau files, closing the coverage gap most owners never notice.</p></div></div>
+      <div class="lesson"><span class="ln">06</span><div><b>Monitoring, Managed</b><p>We run live credit monitoring so every tradeline is verified the moment it posts — the build stays visible to you throughout.</p></div></div>
+    </div>
+
+    <div class="module">
+      <div class="mod-head"><span class="num">PHASE 03</span><h3>The Tier-1 Vendor Stack</h3><span class="reports">The PAYDEX engine</span></div>
+      <div class="lesson"><span class="ln">07</span><div><b>Vendor Selection &amp; Sequencing</b><p>We open 3–5 net-30 vendors that actually report, staggered across reporting cycles for maximum coverage.</p></div></div>
+      <div class="lesson"><span class="ln">08</span><div><b>Order Strategy &amp; Invoice Cadence</b><p>We manage what's ordered and when, so fresh payment data hits the bureaus every month.</p></div></div>
+      <div class="lesson"><span class="ln">09</span><div><b>Early-Payment Cadence, Automated</b><p>We handle the 10–15-day early-payment timing that builds a high PAYDEX — Days Beyond Terms managed on your behalf.</p></div></div>
+      <div class="lesson"><span class="ln">10</span><div><b>Verification &amp; Vendor Substitution</b><p>We confirm every tradeline posts via live monitoring, and swap in a substitute vendor if one stops reporting.</p></div></div>
+    </div>
+
+    <div class="module">
+      <div class="mod-head"><span class="num">PHASE 04</span><h3>Tier 2 &amp; 3 — Revolving, Fleet, Cash</h3><span class="reports">Profile depth</span></div>
+      <div class="lesson"><span class="ln">11</span><div><b>Revolving Accounts, Unlocked</b><p>Once Tier 1 verifies, we add revolving lines on the EIN and manage utilization to underwriting-friendly levels.</p></div></div>
+      <div class="lesson"><span class="ln">12</span><div><b>Fleet &amp; Fuel Accounts</b><p>We source fleet cards that report, spacing applications to avoid fraud flags.</p></div></div>
+      <div class="lesson"><span class="ln">13</span><div><b>Cash-Credit Accounts Without a PG</b><p>We pursue general credit underwritten on the business profile instead of your personal guarantee.</p></div></div>
+    </div>
+
+    <div class="module">
+      <div class="mod-head"><span class="num">PHASE 05</span><h3>Lender &amp; Funding Readiness</h3><span class="reports">Converting the file</span></div>
+      <div class="lesson"><span class="ln">14</span><div><b>The Lender-Ready Packet</b><p>We assemble financials, bank statements, and a clean identity record the way underwriters want to see them.</p></div></div>
+      <div class="lesson"><span class="ln">15</span><div><b>Business Cards &amp; Lines of Credit</b><p>We identify where your file can carry approval and manage the application sequencing.</p></div></div>
+      <div class="lesson"><span class="ln">16</span><div><b>Compliance Calendar, Managed</b><p>We track every state filing, license, and registration renewal so a lapse never suspends the entity — or the credit file built on it.</p></div></div>
+    </div>
+
+    <div class="module">
+      <div class="mod-head"><span class="num">PHASE 06</span><h3>Federal Registration &amp; Grants</h3><span class="reports">UEI · SAM · CAGE · DSBS · Grants</span></div>
+      <div class="lesson"><span class="ln">17</span><div><b>NAICS Codes &amp; Size Standards</b><p>We select accurate codes and confirm your SBA small-business size standard — never misclassifying to look lower-risk.</p></div></div>
+      <div class="lesson"><span class="ln">18</span><div><b>UEI &amp; Full SAM.gov Registration</b><p>We file your UEI, complete your SAM.gov registration, and secure your CAGE code — all free federal processes, handled for you.</p></div></div>
+      <div class="lesson"><span class="ln">19</span><div><b>DSBS Profile &amp; Capability Statement</b><p>We build the profile contracting officers search, and the one-pager you hand them.</p></div></div>
+      <div class="lesson"><span class="ln">20</span><div><b>Grant Intelligence &amp; Proposal Writing</b><p>Daily-scored federal grant matching, plus full proposal development for qualifying opportunities — included, not billed separately.</p></div></div>
+      <div style="margin:0 24px 20px;padding:16px 18px;background:var(--green-soft);border:1px solid #BFD9C8;border-left:4px solid var(--green);border-radius:4px">
+        <span style="font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:4px">Fact — not a sales pitch</span>
+        <p style="margin:0;font-size:14px;color:#1F3A2A"><strong>UEI, SAM.gov registration, and your CAGE code cost $0 from the government — always.</strong> We handle the filing at no markup beyond your program fee. If anyone else bills you separately for "mandatory federal registration," that's not legitimate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDED TOOLS -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Included with your program</p>
+    <h2 class="sec">Full visibility into every step we take.</h2>
+    <div class="bonus-grid">
+      <div class="bonus"><span class="tag">Included</span><b>Identity Master Record</b><p>The single-source-of-truth sheet for your legal name, EIN, address, phone, and IDs — kept current across every application we file.</p></div>
+      <div class="bonus"><span class="tag">Included</span><b>Vendor &amp; Bureau Reference Matrix</b><p>Live-maintained table of your Tier-1 vendors, which bureaus each reports to, terms, and current status.</p></div>
+      <div class="bonus"><span class="tag">Included</span><b>Compliance Calendar</b><p>Every state filing, license, and registration renewal tracked and flagged before it lapses.</p></div>
+      <div class="bonus"><span class="tag">Included</span><b>Capability Statement</b><p>Built for you, carrying your UEI, CAGE, and NAICS — ready to hand to contracting officers.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GRANTS BUILT IN -->
+<section class="pain" style="padding-top:60px">
+  <div class="wrap">
+    <p class="eyebrow">Not an upsell — built in</p>
+    <h2 class="sec">Grants aren't extra here.</h2>
+    <p class="lede" style="margin-bottom:28px">Once your entity is SAM.gov-registered, it's discoverable for federal and state grants — not just contract bids. Most business-credit programs never touch this. Every NXTGEN program includes it:</p>
+    <div class="pillars" style="margin-top:0">
+      <div class="pillar" style="border-top-color:var(--amber)">
+        <h3>Grant Intelligence Scan</h3>
+        <p>Daily automated scan of federal funding opportunities scored against your entity's specific profile — delivered as a digest. A $1,500 value over 6 months, included.</p>
+      </div>
+      <div class="pillar" style="border-top-color:var(--amber)">
+        <h3>Grant Writing &amp; Proposal Development</h3>
+        <p>Full proposal development — narrative, budget justification, compliance review — up to 2 per month. A $7,200 value over 6 months, included.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="pain">
+  <div class="wrap">
+    <p class="eyebrow">The difference</p>
+    <h2 class="sec">Doing it alone vs. having it done for you.</h2>
+    <table class="cmp">
+      <thead><tr><th>Outcome</th><th>Going alone</th><th>With NXTGEN's Program</th></tr></thead>
+      <tbody>
+        <tr><td>Bureau files</td><td class="alone">May never open, or open split</td><td class="with">We open and verify one clean file</td></tr>
+        <tr><td>Tradelines</td><td class="alone">Vendors that quietly don't report</td><td class="with">We select, monitor, and substitute as needed</td></tr>
+        <tr><td>Payment strategy</td><td class="alone">"On time is fine"</td><td class="with">We run the early-pay cadence that moves PAYDEX</td></tr>
+        <tr><td>Federal registration</td><td class="alone">Skipped, or paid $500+ to a middleman</td><td class="with">We file it — free from the government, included in your program</td></tr>
+        <tr><td>Grants</td><td class="alone">Ignored, or a separate $250–$1,200/mo service</td><td class="with">Scanned and written for you, included</td></tr>
+        <tr><td>Funding applications</td><td class="alone">Personal credit + PG every time</td><td class="with">Business file carries the weight</td></tr>
+        <tr><td>Compliance</td><td class="alone">CPN &amp; shelf-company traps</td><td class="with">Clean, legal, defensible</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:center">Enrollment</p>
+    <h2 class="sec" style="text-align:center">The Complete Business Credit &amp; Federal Program</h2>
+    <p class="lede" style="text-align:center;margin:0 auto">Six months, executed end to end — credit building, federal registration, and grant services, handled by our team.</p>
+    <div class="price-panel">
+      <div class="price-lines">
+        <div class="pl"><span>Fundable Foundation Setup</span><b>$450</b></div>
+        <div class="pl"><span>D-U-N-S &amp; Bureau File Setup</span><b>$350</b></div>
+        <div class="pl"><span>Federal Registration Track</span><b>$600</b></div>
+        <div class="pl"><span>Tier 1 Vendor Build &amp; Monitoring (6 mo)</span><b>$2,100</b></div>
+        <div class="pl"><span>Tier 2 &amp; 3 Management, once unlocked (6 mo)</span><b>$1,800</b></div>
+        <div class="pl"><span>Compliance Calendar Management (6 mo)</span><b>$600</b></div>
+        <div class="pl"><span>Grant Intelligence Scan (6 mo)</span><b>$1,500</b></div>
+        <div class="pl"><span>Grant Writing &amp; Proposal Dev. (6 mo)</span><b>$7,200</b></div>
+        <div class="pl total"><span>Individual value if purchased separately</span><b>$14,600</b></div>
+        <div class="pl bundle"><span>Your bundled program price</span><b>$12,500</b></div>
+      </div>
+      <div class="price-cta">
+        <span class="now">Choose how you pay</span>
+        <div class="pay-options">
+          <div class="pay-card rec">
+            <span class="tag">Best value</span>
+            <div class="amt">$10,995</div>
+            <div class="sub">Pay in full today</div>
+            <a class="btn primary" href="#" style="display:block">Enroll — Pay in Full</a>
+          </div>
+          <div class="pay-card">
+            <span class="tag">Payment plan</span>
+            <div class="amt">$2,083<span style="font-size:16px">/mo</span></div>
+            <div class="sub">6 monthly payments · $12,500 total</div>
+            <a class="btn ghost" href="#" style="display:block;color:#fff;border-color:var(--muted-dark)">Enroll — Payment Plan</a>
+          </div>
+        </div>
+        <p class="note">Both options processed at checkout · Refund and cancellation terms stated at checkout and in our <a href="refund.html" style="color:var(--green-bright)">Refund Policy</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow">Questions, answered</p>
+    <h2 class="sec">Frequently asked.</h2>
+    <details><summary>Is this credit repair?</summary><p>No. This is business credit building, done for you — establishing and managing a new, legitimate credit file for your company with real reporting vendors. We do not dispute items on personal credit reports, and we never use CPNs or misrepresent business age or revenue.</p></details>
+    <details><summary>What exactly does NXTGEN do vs. what do I do?</summary><p>We execute the build: opening bureau files, selecting and managing vendor accounts, running the early-payment cadence, filing your federal registration, and handling grant matching and writing. You provide the business documents and decisions we need along the way (e.g., signing applications, approving payments) — we handle the rest.</p></details>
+    <details><summary>How long until my business has a usable score?</summary><p>There is no legitimate overnight score. With clean sequencing, first tradelines typically post within 1–3 months of opening vendor accounts, and a usable PAYDEX generally follows once enough payment experiences report — all within your 6-month program.</p></details>
+    <details><summary>Are grants really included, not extra?</summary><p>Yes. Grant Intelligence Scanning and Grant Writing (up to 2 proposals/month) are part of every program at no additional charge — most competitors charge $250–$1,200/month for this alone.</p></details>
+    <details><summary>Can I pay monthly?</summary><p>Yes — 6 monthly payments of $2,083 (totaling $12,500), or pay in full for $10,995 and save more.</p></details>
+    <details><summary>Is SAM.gov registration really free?</summary><p>Yes — always. The UEI, SAM.gov registration, CAGE code, and renewals cost nothing from the government. We handle the entire filing as part of your program at no markup. Anyone billing separately for "required" federal registration is not legitimate.</p></details>
+    <details><summary>Will this get my business $50K guaranteed?</summary><p>No, and be suspicious of anyone who promises that. This program builds the file that funding decisions are made on. Approvals depend on your revenue, time in business, and the strength of the profile — no one can guarantee a lending outcome.</p></details>
+    <details><summary>What if a vendor stops reporting?</summary><p>We monitor every tradeline and handle vendor substitutions on your behalf — that's part of what "done for you" means here.</p></details>
+    <details><summary>What's the refund and cancellation policy?</summary><p>Full details are in our <a href="refund.html">Refund Policy</a>. In short: you can cancel before setup work begins for a full refund; once we've begun filing registrations and opening accounts on your behalf, one-time setup fees reflect work already performed, and any remaining monthly installments are simply not charged if you cancel.</p></details>
+
+    <div class="guard">
+      <b class="t">Our hard lines — what we will never do</b>
+      <ul>
+        <li>No CPNs or "credit privacy numbers" in place of an EIN or SSN where one is legally required.</li>
+        <li>No misrepresenting time-in-business, revenue, or shelf-company age on any application — that's fraud, not strategy.</li>
+        <li>No paid "personal credit repair" — that's a separately regulated activity (CROA + state law), and it's outside this program's scope.</li>
+        <li>No paying third parties for government registrations that are free.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final dark">
+  <div class="wrap">
+    <h2 class="sec">Your credit file won't build itself.<br>Let us build it.</h2>
+    <p>Every month without reporting tradelines is a month of payment history you can never get back.</p>
+    <a class="btn primary" href="#pricing">Enroll Now</a>
+    <p class="sub-cta">6-month program · Pay in full or in installments · Business credit building &amp; federal registration, done for you</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#top">NXTGEN<span>&nbsp;Consulting LLC</span></a>
+        <p style="max-width:360px;margin-top:12px">Done-for-you business credit building, federal registration, and grant services for founders and funding professionals. Real systems from a live build — no shortcuts, no gray areas.</p>
+        <p style="font-family:var(--mono);font-size:12px">info@nxtgencosult.com<br>Sugar Land, TX</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#team">Your Team</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="disclaimer.html">Results Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>© 2026 NXTGEN Consulting LLC. All rights reserved.</p>
+      <p><strong>Professional services program.</strong> This is a done-for-you business credit building and federal registration service and is not legal, tax, or financial advice. NXTGEN does not provide personal credit repair services. No funding amount, approval, credit score, or grant award is guaranteed; results depend on your business's circumstances. Vendor reporting relationships change — we monitor and substitute as needed.</p>
+      <p><strong>Government registrations are free.</strong> The UEI, SAM.gov registration, CAGE code, and all renewals are provided by the U.S. government at no cost. NXTGEN files these on your behalf as part of your program fee and never charges a separate markup for the registration itself.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// PAYDEX gauge animation (respects reduced motion)
+(function(){
+  const arc=document.getElementById('gaugeArc'), num=document.getElementById('gaugeNum');
+  const target=80, max=100, C=352;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    num.textContent=target; arc.setAttribute('stroke-dashoffset', C-(C*target/max)); return;
+  }
+  let started=false;
+  function run(){
+    if(started)return; started=true;
+    const t0=performance.now(), dur=1600;
+    function tick(t){
+      const p=Math.min((t-t0)/dur,1), e=1-Math.pow(1-p,3);
+      const v=Math.round(target*e);
+      num.textContent=v;
+      arc.setAttribute('stroke-dashoffset', C-(C*(target*e)/max));
+      if(p<1)requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  const io=new IntersectionObserver(es=>{es.forEach(x=>{if(x.isIntersecting)run();});},{threshold:.4});
+  io.observe(arc);
+})();
+</script>
+</body>
+</html>
